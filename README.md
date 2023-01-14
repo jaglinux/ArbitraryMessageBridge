@@ -18,6 +18,7 @@ https://sepolia.etherscan.io/tx/0xbffa1e45085d76402759a45132b03cae1a0a45644e024e
 truffle migrate --reset --network goerli <br>
 truffle migrate --reset --network sepolia  <br>
 ## To run test
+Source Code @ https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/test/Counter.js <br>
 truffle test
 
 ## Sign transaction script and submit txn to Goerli chain 
