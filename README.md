@@ -13,7 +13,10 @@ https://sepolia.etherscan.io/address/0xd4367053379ccb9ac98606627bbe9dc1f99e6c9d
 
 Sucessful txn which incremented the counter
 https://sepolia.etherscan.io/tx/0xbffa1e45085d76402759a45132b03cae1a0a45644e024eda4dd403c0ea71806b
-
+## Setup instructions<br>
+git clone https://github.com/jaglinux/ArbitraryMessageBridge.git <br>
+yarn install<br>
+truffle compile <br>
 ## Steps to deploy the contracts. <br>
 truffle migrate --reset --network goerli <br>
 truffle migrate --reset --network sepolia  <br>
