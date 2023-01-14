@@ -25,7 +25,7 @@ Use the script https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/sc
 to sign the txn to increment and submit it on source chain. <br>
 truffle exec  scripts/transact.js --network goerli_1 <br>
 goerli_1 is the second address (other than the owner) which wants to increment the counter. <br>
-https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/truffle-config.js#L93
+https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/truffle-config.js#L93 <br>
 The env variable PRIV_KEY represents relayer / owner key. <br>
 The env variable PRIV_KEY_1 represents user or client key. <br>
 
