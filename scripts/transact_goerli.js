@@ -2,6 +2,7 @@ module.exports = async function(callback) {
     const address = await web3.eth.getAccounts();
     console.log(address)
     const nonce = 0;
+    // Change the public key accordingly
     const accountFrom = '0xdb50cb3eb91d1856dae9ff72be86d75c62f899a9';
     // desstination contract on Sepolia network
     const destinationContract = '0xd4367053379Ccb9AC98606627BBe9DC1f99e6C9d';
