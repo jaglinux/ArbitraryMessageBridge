@@ -24,11 +24,15 @@ https://sepolia.etherscan.io/tx/0xbffa1e45085d76402759a45132b03cae1a0a45644e024e
 Source Code @ https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/test/Counter.js <br>
 *truffle test*
 
-## Sign transaction script and submit txn to Goerli chain 
-Use the script https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/scripts/transact_goerli.js <br>
-to sign the txn from Account[1]. It increments the counter and submits the txn to source chain. <br>
+## Helper scripts
+Use the script https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/scripts/send_transaction_goerli.js <br>
+to sign the txn from Account[1] and sends the txn over goerli. <br>
+Use --nonce to send the desired nonce value.
 
-*truffle exec  scripts/transact.js --network goerli* <br>
+*truffle exec  scripts/send_transaction_goerli.js --network goerli --nonce 9* <br>
+
+To print only signature <br>
+*truffle exec  scripts/print_signature_goerli.js --network goerli --nonce 9* <br>
 
 Account[1] is derived from PRIV_KEY_1. This account is considered as user account interested in incrementing the counter. <br>
 Account[0] is the deployer, ownner, relayer.
