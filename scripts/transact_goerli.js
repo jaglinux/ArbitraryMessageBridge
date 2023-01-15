@@ -1,9 +1,9 @@
 module.exports = async function(callback) {
     const address = await web3.eth.getAccounts();
-    console.log(address)
-    const nonce = 0;
-    // Change the public key accordingly
-    const accountFrom = '0xdb50cb3eb91d1856dae9ff72be86d75c62f899a9';
+    const nonce = 1;
+    // We are using address[0] for deployment / owner / relayer
+    // address[1] as user which will increment counter
+    const accountFrom = address[1];
     // desstination contract on Sepolia network
     const destinationContract = '0xd4367053379Ccb9AC98606627BBe9DC1f99e6C9d';
     const incr_value = 1;
@@ -22,13 +22,11 @@ module.exports = async function(callback) {
     const Counter = artifacts.require('Counter.sol')
     const counter = await Counter.deployed();
     const data = await counter.counter()
-    console.log(data.toString())
-    console.log(counter.address)
 
     const weiValue = (web3.utils.toWei('0.001', 'ether')) * incr_value;
     console.log(weiValue);
-    const txn = await counter.send(accountFrom, destinationContract, nonce, incr_value, signature.signature,
-         {value: weiValue, from:address[0]})
+    const txn = await counter.send(destinationContract, nonce, incr_value, signature.signature,
+         {value: weiValue, from:address[1]})
     console.log(txn)
 
     callback();
