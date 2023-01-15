@@ -26,12 +26,16 @@ truffle test
 
 ## Sign transaction script and submit txn to Goerli chain 
 Use the script https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/scripts/transact_goerli.js <br>
-to sign the txn to increment and submit it on source chain. <br>
-truffle exec  scripts/transact.js --network goerli_1 <br>
-goerli_1 is the second address (other than the owner) which wants to increment the counter. <br>
+to sign the txn from Account[1]. It increments the counter and submits the txn to source chain. <br>
+
+truffle exec  scripts/transact.js --network goerli <br>
+
+Account[1] is derived from PRIV_KEY_1. This account is considered as user account interested in incrementing the counter. <br>
+Account[0] is the deployer, ownner, relayer.
 https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/truffle-config.js#L93 <br>
-The env variable PRIV_KEY represents relayer / owner key. <br>
-The env variable PRIV_KEY_1 represents user or client key (or the second address which is discussed earlier). <br>
+## ENV KEYS
+The env variable PRIV_KEY represents relayer / owner key (Account[0]). <br>
+The env variable PRIV_KEY_1 represents user or client key (Account[1]). <br>
 The env variable PROJECT_ID represents Infura key. <br>
 
 ## Coming up
