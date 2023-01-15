@@ -13,7 +13,10 @@ https://sepolia.etherscan.io/address/0xd4367053379ccb9ac98606627bbe9dc1f99e6c9d
 
 Sucessful txn which incremented the counter
 https://sepolia.etherscan.io/tx/0xbffa1e45085d76402759a45132b03cae1a0a45644e024eda4dd403c0ea71806b
-
+## Setup instructions<br>
+git clone https://github.com/jaglinux/ArbitraryMessageBridge.git <br>
+yarn install<br>
+truffle compile <br>
 ## Steps to deploy the contracts. <br>
 truffle migrate --reset --network goerli <br>
 truffle migrate --reset --network sepolia  <br>
@@ -28,7 +31,8 @@ truffle exec  scripts/transact.js --network goerli_1 <br>
 goerli_1 is the second address (other than the owner) which wants to increment the counter. <br>
 https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/truffle-config.js#L93 <br>
 The env variable PRIV_KEY represents relayer / owner key. <br>
-The env variable PRIV_KEY_1 represents user or client key. <br>
+The env variable PRIV_KEY_1 represents user or client key (or the second address which is discussed earlier). <br>
+The env variable PROJECT_ID represents Infura key. <br>
 
 ## Coming up
 Relayer script to submit singed txn on Sepolia chain <br>
