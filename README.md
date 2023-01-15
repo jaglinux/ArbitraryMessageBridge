@@ -31,13 +31,14 @@ Use --nonce to send the desired nonce value.
 
 *truffle exec  scripts/send_transaction_goerli.js --network goerli --nonce 9* <br>
 
-To print only signature <br>
+### To print only signature <br>
 *truffle exec  scripts/print_signature_goerli.js --network goerli --nonce 9* <br>
 
+## Account and ENV KEYS
 Account[1] is derived from PRIV_KEY_1. This account is considered as user account interested in incrementing the counter. <br>
 Account[0] is the deployer, ownner, relayer.
 https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/truffle-config.js#L93 <br>
-## ENV KEYS
+
 The env variable PRIV_KEY represents relayer / owner key (Account[0]). <br>
 The env variable PRIV_KEY_1 represents user or client key (Account[1]). <br>
 The env variable PROJECT_ID represents Infura key. <br>
