@@ -14,21 +14,21 @@ https://sepolia.etherscan.io/address/0xd4367053379ccb9ac98606627bbe9dc1f99e6c9d
 Sucessful txn which incremented the counter
 https://sepolia.etherscan.io/tx/0xbffa1e45085d76402759a45132b03cae1a0a45644e024eda4dd403c0ea71806b
 ## Setup instructions<br>
-git clone https://github.com/jaglinux/ArbitraryMessageBridge.git <br>
-yarn install<br>
-truffle compile <br>
+*git clone https://github.com/jaglinux/ArbitraryMessageBridge.git* <br>
+*yarn install*<br>
+*truffle compile* <br>
 ## Steps to deploy the contracts. <br>
-truffle migrate --reset --network goerli <br>
-truffle migrate --reset --network sepolia  <br>
+*truffle migrate --reset --network goerli* <br>
+*truffle migrate --reset --network sepolia* <br>
 ## To run test
 Source Code @ https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/test/Counter.js <br>
-truffle test
+*truffle test*
 
 ## Sign transaction script and submit txn to Goerli chain 
 Use the script https://github.com/jaglinux/ArbitraryMessageBridge/blob/master/scripts/transact_goerli.js <br>
 to sign the txn from Account[1]. It increments the counter and submits the txn to source chain. <br>
 
-truffle exec  scripts/transact.js --network goerli <br>
+*truffle exec  scripts/transact.js --network goerli* <br>
 
 Account[1] is derived from PRIV_KEY_1. This account is considered as user account interested in incrementing the counter. <br>
 Account[0] is the deployer, ownner, relayer.
